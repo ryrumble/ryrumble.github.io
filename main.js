@@ -1,11 +1,13 @@
 var gameData = {
   gold: 0,
   goldPerClick: 1,
-  goldPerClickCost: 10
+  goldPerClickCost: 10,
+  goldPerDwarfCost: 10,
+  dwarf: 0,
 }
 
 function mineGold() {
-  gameData.gold += gameData.goldPerClick
+  gameData.gold += (gameData.goldPerClick + gameData.dwarf)
   document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
 }
 
@@ -16,6 +18,16 @@ function buyGoldPerClick() {
     gameData.goldPerClickCost *= 2
     document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
+  }
+}
+
+function getDwarf() {
+  if (gameData.gold >= gameData.goldPerDwarfCost) {
+    gameData.gold -= gameData.goldPerDwarfCost
+    gameData.dwarf += 1
+    gameData.goldPerDwarfCost *= 2
+    document.getElementById("dwarfNum").innerHTML = "Number of Dwarves: " + gameData.dwarf
+    document.getElementById("getDwarf").innerHTML = "Get a dwarf. Cost: " + goldPerDwarfCost + " Gold"
   }
 }
 
