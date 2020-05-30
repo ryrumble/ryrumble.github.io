@@ -27,7 +27,7 @@ function getDwarf() {
     gameData.dwarf += 1
     gameData.goldPerDwarfCost *= 2
     document.getElementById("dwarfNum").innerHTML = "Number of Dwarves: " + gameData.dwarf
-    document.getElementById("perDwarfUpgrade").innerHTML = "Get a dwarf. Cost: " + goldPerDwarfCost + " Gold"
+    document.getElementById("perDwarfUpgrade").innerHTML = "Get a dwarf. Cost: " + gameData.goldPerDwarfCost + " Gold"
   }
 }
 
