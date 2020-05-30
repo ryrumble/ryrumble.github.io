@@ -35,7 +35,7 @@ function getDwarf() {
 var mainGameLoop = window.setInterval(function() {
   mineGold()
 }, 1000)
-
+/*
 var saveGame = JSON.parse(localStorage.getItem("goldMinerSave"))
 if (savegame !== null) {
   gameData = saveGame
@@ -44,3 +44,4 @@ if (savegame !== null) {
 var saveGameLoop = window.setInterval(function() {
   localStorage.setItem("goldMinerSave", JSON.stringify(gameData))
 }, 15000)
+*/
