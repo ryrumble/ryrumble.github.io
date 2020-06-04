@@ -8,7 +8,7 @@ var gameData = {
 
 function mineGold() {
   gameData.gold += (gameData.goldPerClick + gameData.dwarf)
-  document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
+  document.getElementById("expEarned").innerHTML = gameData.gold + " Experience Earned"
 }
 
 function buyGoldPerClick() {
@@ -16,7 +16,7 @@ function buyGoldPerClick() {
     gameData.gold -= gameData.goldPerClickCost
     gameData.goldPerClick += 1
     gameData.goldPerClickCost *= 2
-    document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
+    document.getElementById("expEarned").innerHTML = gameData.gold + " Experience Earned"
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
   }
 }
